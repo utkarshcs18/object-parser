@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ObjectParser</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        <div class="brand-title">
+          <span id="titleText">JS <span class="arrow">→</span> JSON</span>
+        </div>
+        <div class="brand-sub">converter</div>
+      </div>
+      <div class="header-right">
+        <button class="btn btn-outline" id="clearBtn">Clear</button>
+        <button class="btn btn-accent" id="convertBtn">Convert →</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="panel-left">
+        <div class="panel-head">
+          <span class="panel-label" id="leftLabel">JavaScript Object</span>
+          <span class="status-pill pill-neutral" id="inputStatus">Ready</span>
+        </div>
+        <textarea id="inputArea" spellcheck="false" placeholder="// Paste your JS object here
+// Unquoted keys, single quotes, trailing commas — all fine!
+
+const config = {
+  name: 'my-app',
+  version: '1.0.0',
+  debug: false,
+  port: 3000,
+  tags: ['web', 'api',],
+  author: {
+    name: 'Dev',
+    email: 'dev@example.com',
+  },
+}"></textarea>
+
+        <div class="fixes-bar" id="fixesBar">
+          <span class="fixes-label">Fixes</span>
+          <span class="empty-text">— none yet —</span>
+        </div>
+      </div>
+
+      <div class="divider-col">
+        <button class="swap-btn" id="swapBtn" title="Flip direction">&#8644;</button>
+      </div>
+
+      <div class="panel-right">
+        <div class="panel-head">
+          <span class="panel-label" id="rightLabel">Valid JSON</span>
+          <span class="status-pill pill-neutral" id="outputStatus">Waiting</span>
+        </div>
+        <div class="output-area" id="outputArea">
+          <div class="empty">
+            <div class="empty-sym">{}</div>
+            <div class="empty-txt">Output will appear here</div>
+            <div class="empty-hint">type or paste on the left</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+    <footer>
+      <div class="bottom-bar">
+        <span id="bottomMeta">—</span>
+        <div class="bottom-actions">
+          <button class="btn btn-solid" id="copyBtn">Copy Output</button>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+  </body>
+</html>
