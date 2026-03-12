@@ -61,7 +61,7 @@ Output:
 Clone the repository:
 
 ```bash
-git clone https://github.com/utkarshcs18/objectParser.git
+git clone https://github.com/utkarshcs18/object-parser.git
 ```
 
 
